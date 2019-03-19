@@ -8,10 +8,10 @@
 PROJECT_NAME=project
 
 run:
-	./websocket-chat
+	./$(PROJECT_NAME)
 
 build: vendor
-	go build -v -o websocket-chat
+	go build -v -o $(PROJECT_NAME)
 
 vendor:
 	dep ensure
