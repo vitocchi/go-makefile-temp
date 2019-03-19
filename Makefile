@@ -7,6 +7,8 @@
 # make use the project name to name binary file and run it
 PROJECT_NAME=project
 
+.PHONY: vendor
+
 run:
 	./$(PROJECT_NAME)
 
