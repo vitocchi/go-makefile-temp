@@ -9,6 +9,10 @@ PROJECT_NAME=project
 
 .PHONY: vendor
 
+rerun:
+	$(MAKE) build
+	$(MAKE) run 
+
 run:
 	./$(PROJECT_NAME)
 
@@ -17,3 +21,7 @@ build: vendor
 
 vendor:
 	dep ensure
+
+clean:
+	rm $(PROJECT_NAME)
+	rm -rf vendor
