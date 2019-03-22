@@ -10,18 +10,18 @@ PROJECT_NAME=project
 .PHONY: vendor
 
 rerun:
-	$(MAKE) build
+	$(MAKE) install
 	$(MAKE) run 
 
 run:
-	./$(PROJECT_NAME)
+	$(PROJECT_NAME)
 
 build: vendor
-	go build -v -o $(PROJECT_NAME)
+	go install
 
 vendor:
 	dep ensure
 
 clean:
-	rm $(PROJECT_NAME)
+	rm $(GOPATH)/bin/$(PROJECT_NAME)
 	rm -rf vendor
