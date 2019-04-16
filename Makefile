@@ -16,7 +16,7 @@ rerun:
 run:
 	$(PROJECT_NAME)
 
-build: vendor
+install: vendor
 	go install
 
 vendor:
